@@ -1,11 +1,16 @@
 import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Table({ userInputForTable }) {
+  if (userInputForTable.duration < 1) {
+    return <h1>ERROR</h1>;
+  }
+
   const tableData = calculateInvestmentResults(userInputForTable);
   const initialInvestment =
     tableData[0].valueEndOfYear -
     tableData[0].interest -
     tableData[0].annualInvestment;
+
   return (
     <table id="result">
       <thead>

@@ -22,6 +22,9 @@ function App() {
       };
     });
   }
+
+  // const errorHandler = userInput.duration >= 1;
+
   return (
     <>
       <Header />
