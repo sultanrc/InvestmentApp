@@ -23,13 +23,19 @@ function App() {
     });
   }
 
-  // const errorHandler = userInput.duration >= 1;
+  const validDuration = userInput.duration >= 1;
 
   return (
     <>
       <Header />
       <Inputs onChange={handleChange} userInputForInputs={userInput} />
-      <Table userInputForTable={userInput} />
+      {validDuration ? (
+        <Table userInputForTable={userInput} />
+      ) : (
+        <h3 className="center">
+          Please enter valid duration greater than zero
+        </h3>
+      )}
     </>
   );
 }

@@ -1,9 +1,9 @@
 import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Table({ userInputForTable }) {
-  if (userInputForTable.duration < 1) {
-    return <h1>ERROR</h1>;
-  }
+  //   if (userInputForTable.duration < 1) {
+  //     return <h1>ERROR</h1>;
+  //   }
 
   const tableData = calculateInvestmentResults(userInputForTable);
   const initialInvestment =
